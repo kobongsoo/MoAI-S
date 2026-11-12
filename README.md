@@ -7,7 +7,8 @@
 <p align="center">
   <a href="https://github.com/kobongsoo/MoAI-S/releases/latest"><b>⬇ 다운로드</b></a> ·
   <a href="https://kobongsoo.github.io/MoAI-S/">소개 사이트</a> ·
-  <a href="https://kobongsoo.github.io/MoAI-S/manual.html">사용 설명서</a>
+  <a href="https://kobongsoo.github.io/MoAI-S/manual.html">사용 설명서</a> ·
+  <a href="https://kobongsoo.github.io/MoAI-S/changelog.html">변경 기록</a>
 </p>
 
 ![MoAI 탐색기](docs/img/main.jpg)
@@ -18,6 +19,8 @@
 - **모두 찾기** — 검색어가 든 문서를 모두, *모두 포함 · 일부 포함 · 비슷한 내용*으로 묶어 보여 줍니다.
 - **미리 보기** — 쪽을 누르면 그 쪽이(PDF 는 원본 모양으로), 두 번 누르면 문서가 열립니다.
 - **AI 참고 답변** — 찾은 문서 상위 3건을 AI 가 한 줄씩 정리합니다.
+- **비슷한 문서 찾기** — 문서 하나를 넣으면 내용이 비슷한 문서를 찾아 보여 줍니다(0.1.3).
+- **인덱싱 실패 문서 보기** — 설정 > 로그에서 읽지 못한 문서와 까닭을 봅니다(0.1.3).
 - **채팅 모드** — Windows 탐색기 옆 패널에서 문서를 근거로 묻고 답을 받습니다.
 - **온디바이스** — 인덱스와 AI 모델이 모두 PC 안에서 돕니다. 인터넷이 없어도 됩니다.
 

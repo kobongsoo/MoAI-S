@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MoAI-S 변경 기록</title>
+<meta name="description" content="MoAI-S 버전별로 바뀐 점">
+<link rel="icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
+<style>
+:root {
+  --ground: #f6f8fb; --surface: #ffffff; --sunken: #eef1f6; --ink: #17202c; --ink-2: #3b4656; --muted: #687587;
+  --rule: #dbe1ea; --accent: #2c5aa0; --accent-soft: #e4ecf8; --brand: #d6213a; --brand-soft: #fbe6e9;
+  --warn: #9a6212; --warn-soft: #fbf1df;
+  --sans: "IBM Plex Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground: #10141a; --surface: #171d25; --sunken: #1e2530; --ink: #e6eaf0; --ink-2: #c3cad5; --muted: #8e9aab;
+    --rule: #2a3340; --accent: #86a9e3; --accent-soft: #1d2a40; --brand: #f06277; --brand-soft: #3a1c22;
+    --warn: #e2b062; --warn-soft: #362a16;
+  }
+}
+:root[data-theme="dark"] {
+  --ground: #10141a; --surface: #171d25; --sunken: #1e2530; --ink: #e6eaf0; --ink-2: #c3cad5; --muted: #8e9aab;
+  --rule: #2a3340; --accent: #86a9e3; --accent-soft: #1d2a40; --brand: #f06277; --brand-soft: #3a1c22;
+  --warn: #e2b062; --warn-soft: #362a16;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--ground); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.75;
+  word-break: keep-all; overflow-wrap: anywhere; }
+a { color: var(--accent); text-underline-offset: 3px; }
+code { font-family: Consolas, "D2Coding", monospace; font-size: .88em; background: var(--sunken); padding: 1px 6px; border-radius: 4px; }
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+header.nav { background: var(--surface); border-bottom: 1px solid var(--rule); }
+header.nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; max-width: 1120px; }
+.logo { display: flex; align-items: center; gap: 8px; text-decoration: none; color: var(--ink); font-size: 18px; }
+.logo img { width: 30px; height: 30px; }
+.logo span { color: var(--brand); }
+nav a { margin-left: 18px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+nav a:hover { color: var(--accent); }
+h1 { font-size: 30px; margin: 40px 0 6px; line-height: 1.3; }
+.sub { color: var(--muted); margin: 0 0 30px; }
+.ver { background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; padding: 22px 26px; margin: 0 0 22px; }
+.ver h2 { font-size: 22px; margin: 0; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.ver h2 .date { font-size: 14px; font-weight: 400; color: var(--muted); }
+.ver h2 .latest { font-size: 12px; font-weight: 600; color: var(--brand); background: var(--brand-soft); border-radius: 999px; padding: 1px 9px; }
+.ver .lead { margin: 6px 0 12px; color: var(--ink-2); }
+.ver h3 { font-size: 15px; margin: 16px 0 4px; color: var(--accent); }
+.ver ul { margin: 4px 0; padding-left: 22px; }
+.ver li { margin: 4px 0; }
+.notice { border-left: 3px solid var(--warn); background: var(--warn-soft); border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 14px 0 4px; }
+.notice ol { margin: 6px 0 0; padding-left: 22px; }
+.dl { margin-top: 12px; font-size: 14px; color: var(--muted); }
+footer { color: var(--muted); font-size: 14px; padding: 30px 0 50px; }
+@media (max-width: 560px) { nav a.opt { display: none; } .ver { padding: 18px 16px; } h1 { font-size: 25px; } }
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="./"><img src="img/moai.png" alt=""><b>MoAI<span>-S</span></b></a>
+    <nav>
+      <a class="opt" href="./#features">기능</a>
+      <a href="./#download">다운로드</a>
+      <a href="manual.html">사용 설명서</a>
+      <a href="changelog.html">변경 기록</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+<h1>변경 기록</h1>
+<p class="sub">버전마다 바뀐 점입니다. 새 버전 설치 파일을 그대로 실행하면 덮어 설치되고, 검색 폴더 · 설정은 남습니다.</p>
+
+<!-- 새 버전은 맨 위에 더한다 -->
+<section class="ver" id="v0.1.3">
+  <h2>0.1.3 <span class="date">2026-11-12</span> <span class="latest">최신</span></h2>
+  <p class="lead">비슷한 문서 찾기와 인덱싱 실패 문서 보기를 더한 판입니다.</p>
+  <h3>새 기능</h3>
+  <ul>
+    <li><b>비슷한 문서 찾기</b>: 결과 줄을 오른쪽 클릭해 <b>이 문서와 비슷한 문서 찾기</b>를 누르거나, 탐색기 입력란의 <b>[+]</b>를 누르거나, 입력란에 파일을 끌어 놓으면 내용이 비슷한 문서를 목록으로 보여 줍니다.
+      문서마다 비슷한 곳과 기준 문서의 맞닿은 부분(↔)이 함께 나오고, AI 답변창에는 넣은 문서의 요약이 나옵니다. 인덱스에 없는 바깥 문서도 넣을 수 있습니다(저장하지 않음).</li>
+    <li><b>설정 &gt; 로그</b>: 인덱싱하지 못한 문서와 그 까닭을 보여 줍니다. 글자 없는 PDF(스캔본), 암호 걸린 문서, 형식을 알 수 없는 파일처럼 원인별로 묶고, 문서마다 [열기] · [폴더] · [다시 시도]가 있습니다.
+      최근 7일 로그의 경고 · 오류도 같은 내용끼리 묶어 횟수와 함께 보여 줍니다. 왼쪽 메뉴에 실패 수가 붙습니다(예: <code>로그 (12)</code>).</li>
+  </ul>
+  <h3>바뀐 점</h3>
+  <ul>
+    <li><b>PDF 표 찾기</b>: 테두리가 있는 표를 알아보고, 작은 표는 통째로 한 조각으로 넣어 표 안 내용을 묻는 질문에 더 잘 답합니다.</li>
+    <li><b>파일 이름 바꾸기 바로 반영</b>: 이름만 바꾼 문서를 다시 읽지 않고 옮긴 것으로 처리해 바로 새 이름으로 찾습니다.</li>
+    <li><b>로그 파일 위치 · 이름</b>: <code>%LOCALAPPDATA%\MoAISearch\log\MoAISearch_날짜.log</code>로 바뀌었습니다. 설정 &gt; 로그의 [열기]로 폴더를 엽니다. 대화 기록은 예전 자리 그대로입니다.</li>
+    <li>로그 폴더 보기를 설정 &gt; 기본에서 설정 &gt; 로그로 옮겼습니다.</li>
+  </ul>
+  <div class="notice">
+    <b>0.1.2 이하에서 올린 경우</b>: PDF 표 찾기로 문서를 나누는 규칙이 바뀌어, 예전 인덱스에서는 새 문서 · 고친 문서가 반영되지 않을 수 있습니다.
+    설정 &gt; 로그의 경고에 <code>청킹 설정이 인덱스와 다릅니다</code>가 보이면 아래처럼 인덱스를 새로 만드세요(검색 폴더 · 설정 · 사전은 남습니다).
+    <ol>
+      <li>트레이의 MoAI 아이콘을 오른쪽 클릭해 [종료]를 누릅니다.</li>
+      <li>설치 폴더 <code>%LOCALAPPDATA%\Programs\MoAISearch</code>에서 <code>rag_index</code> 폴더와 <code>index_state.json</code> · <code>bm25_index.bin</code> · <code>bm25_index.bin.delta</code> 파일을 지웁니다.</li>
+      <li>MoAI-S를 다시 켜면 검색 폴더를 처음부터 다시 읽습니다. 읽는 동안에도 읽은 문서부터 찾을 수 있습니다.</li>
+    </ol>
+  </div>
+  <p class="dl"><a href="https://github.com/kobongsoo/MoAI-S/releases/tag/v0.1.3">릴리스 v0.1.3</a> · <code>MoAISearch_Setup_0.1.3.exe</code></p>
+</section>
+
+<section class="ver" id="v0.1.2">
+  <h2>0.1.2 <span class="date">2026-11-09</span></h2>
+  <p class="lead">화면 배치를 고를 수 있게 한 판입니다.</p>
+  <ul>
+    <li><b>[나란히 보기] 켜기 · 끄기</b>: 켜면 Windows 탐색기 오른쪽에 팝업으로 나란히 뜨고, 끄면 채팅 모드도 탐색기 모드처럼 따로 창으로 뜹니다. 설정 창이나 각 화면의 ◨ 단추로 바로 바꿉니다.</li>
+    <li><b>📌 항상 위에 표시</b>: 다른 창에 가리지 않게 맨 위에 둡니다. 화면마다 따로 기억하고 처음엔 켜져 있습니다.</li>
+    <li><b>검색 폴더 고르기</b>: 채팅 입력창 [+] 옆과 탐색기 팝업 머리줄의 📁 단추에서 "모든 검색 폴더 · 폴더별(문서 수)" 중 골라 찾습니다.</li>
+    <li>근거 머리의 "문서 n건"이 고른 범위대로 나오게 바로잡았습니다.</li>
+    <li>탐색기를 닫아도 팝업이 남고, 다시 검색 폴더를 열면 그 옆에 붙습니다.</li>
+    <li>채팅 · 탐색기 팝업 머리줄을 [탐색기|채팅] · 나란히 보기 · 항상 위 순서로 맞췄습니다. 따로 뜨는 채팅 창은 더 넓게(820×860) 뜹니다.</li>
+  </ul>
+  <p class="dl"><a href="https://github.com/kobongsoo/MoAI-S/releases/tag/v0.1.2">릴리스 v0.1.2</a></p>
+</section>
+
+<section class="ver" id="v0.1.1">
+  <h2>0.1.1 <span class="date">2026-11-06</span></h2>
+  <p class="lead">채팅 모드의 문서 올리기를 고친 판입니다.</p>
+  <ul>
+    <li><b>끌어 놓기로 문서 올리기</b>: 탐색기에서 파일을 채팅 입력창으로 끌어 놓으면 올라갑니다. 여러 개를 한 번에 놓아도 됩니다.</li>
+    <li><b>올리기 한도 미리 표시</b>: 대화 하나에 최대 5개, 파일당 30MB 이하입니다. 남은 자리를 보이고, 다 차면 [+]가 흐려집니다.</li>
+    <li><b>"이 문서는 무슨 내용?"에 답합니다</b>: 올린 문서의 요약 · 개요를 물으면 문서 앞 · 가운데 · 끝을 읽고 개요를 답합니다.</li>
+    <li>한국어로 묻고 문서가 영어여도 맞는 부분을 찾으면 답합니다.</li>
+    <li>답 아래 출처 줄 앞에 쉼표만 남던 문제를 고쳤습니다.</li>
+  </ul>
+  <p class="dl"><a href="https://github.com/kobongsoo/MoAI-S/releases/tag/v0.1.1">릴리스 v0.1.1</a></p>
+</section>
+
+<section class="ver" id="v0.1.0">
+  <h2>0.1.0 <span class="date">2026-11-04</span></h2>
+  <p class="lead">첫 공개판입니다.</p>
+  <ul>
+    <li>문장 검색 · 모두 찾기(검색어 모두 포함 / 일부 포함 / 비슷한 내용) · 쪽 단위 발췌</li>
+    <li>미리 보기(PDF 원본 쪽) · 조건 칩(파일 형식 · 날짜 · 작성자)</li>
+    <li>AI 참고 답변(상위 3건 문서별 정리) · 채팅 모드(탐색기 옆 대화 패널)</li>
+    <li>자동 인덱싱 · 동의어 / 이름 별칭 사전 · 사전 후보 알림</li>
+    <li>첫 실행 환영 화면과 화면 사용 안내 7단계</li>
+  </ul>
+  <p class="dl"><a href="https://github.com/kobongsoo/MoAI-S/releases/tag/v0.1.0">릴리스 v0.1.0</a></p>
+</section>
+</main>
+
+<footer><div class="wrap">ⓒ Innotena. All rights reserved. · <a href="./">소개</a> · <a href="manual.html">사용 설명서</a> · <a href="https://github.com/kobongsoo/MoAI-S/releases">모든 릴리스</a></div></footer>
+</body>
+</html>
