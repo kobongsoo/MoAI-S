@@ -116,7 +116,7 @@
       "format": "qwen3",
       "neighbors": false,
       "status": "ready",
-      "rank": 3,
+      "rank": 4,
       "ttft_ratio": 1.4,
       "korean": false,
       "min_app": "0.1.4",
@@ -267,11 +267,11 @@
       "tier": "base",
       "params_b": 2.1,
       "file": "kanana-nano-2.1b-instruct-Q4_K_M.gguf",
-      "file_bytes": 0,
-      "format": "kanana",
+      "file_bytes": 1393493664,
+      "format": "llama3",
       "neighbors": false,
-      "status": "hidden",
-      "rank": 0,
+      "status": "ready",
+      "rank": 3,
       "korean": true,
       "min_app": "0.1.4",
       "icon": {
@@ -279,11 +279,38 @@
         "color": "#f2c200",
         "ink": "#2b2300"
       },
-      "summary": "카카오 · 측정 전",
-      "intro": "측정 전 — 라이선스와 품질을 확인한 뒤 공개합니다.",
-      "license": "확인 중",
+      "summary": "카카오 · 한국어 · 비상업 라이선스",
+      "intro": "카카오가 한국어에 맞춰 만든 작은 모델입니다. 사내 문서 시험에서 내장 모델과 정답 수가 비슷했고, 첫 글자는 조금 늦습니다. 라이선스가 비상업(CC BY-NC 4.0)이라 비상업 용도로만 쓸 수 있습니다.",
+      "license": "CC BY-NC 4.0",
       "source_url": "https://huggingface.co/kakaocorp/kanana-nano-2.1b-instruct",
-      "parts": []
+      "parts": [
+        {
+          "name": "MoAISearch_Model_kanana-nano-2.1b-q4_r1.exe",
+          "bytes": 1395616116,
+          "sha256": "d9c6abee661b1af8b07851bbe3c0f5dd99253945e7121d184f27f9429c5ecf0e"
+        }
+      ],
+      "ttft_ratio": 1.5,
+      "released": "2025",
+      "languages": "한국어 · 영어",
+      "bench": {
+        "date": "2026-11-13",
+        "correct": 50,
+        "of": 100,
+        "ungrounded": null,
+        "evasive": 1,
+        "ttft_s": 3.7
+      },
+      "pros": [
+        "한국어 답이 자연스러움",
+        "내장 모델과 정답 수가 비슷함(50 대 51)"
+      ],
+      "cons": [
+        "첫 글자가 내장 모델보다 약 1.5배 늦음",
+        "비상업 용도로만 쓸 수 있음"
+      ],
+      "license_note": "비상업 용도로만 쓸 수 있습니다(MoAI-S 는 비상업 용도).",
+      "license_file": "Kanana-Nano-CC-BY-NC-4.0.txt"
     },
     {
       "alias": "lfm2.5-1.2b-q4",
@@ -292,7 +319,7 @@
       "tier": "base",
       "params_b": 1.2,
       "file": "LFM2.5-1.2B-Instruct-Q4_K_M.gguf",
-      "file_bytes": 0,
+      "file_bytes": 730895168,
       "format": "lfm2",
       "neighbors": false,
       "status": "hidden",
@@ -303,11 +330,20 @@
         "mono": "L",
         "color": "#111827"
       },
-      "summary": "Liquid AI · 측정 전",
-      "intro": "측정 전 — 지금 판에서 열리는지, 대화 형식 · 라이선스 · 품질을 확인한 뒤 공개합니다.",
-      "license": "LFM Open License (확인 중)",
+      "summary": "Liquid AI · 측정함 — 내장보다 정답이 적어 내놓지 않음",
+      "intro": "2026-11-13 측정: 사내 문서 질문 100개 중 35개 정답(내장 Qwen3-1.7B 51). 첫 글자도 내장 모델과 같아 내놓지 않습니다.",
+      "license": "LFM Open License v1.0",
       "source_url": "https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct",
-      "parts": []
+      "parts": [],
+      "bench": {
+        "date": "2026-11-13",
+        "correct": 35,
+        "of": 100,
+        "ungrounded": null,
+        "evasive": 1,
+        "ttft_s": 2.5
+      },
+      "license_note": "연 매출 1천만 달러 이상 회사는 상업 사용 불가."
     }
   ]
 }
