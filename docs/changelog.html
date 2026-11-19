@@ -77,8 +77,27 @@ footer { color: var(--muted); font-size: 14px; padding: 30px 0 50px; }
 <p class="sub">버전마다 바뀐 점입니다. 새 버전 설치 파일을 그대로 실행하면 덮어 설치되고, 검색 폴더 · 설정은 남습니다.</p>
 
 <!-- 새 버전은 맨 위에 더한다 -->
+<section class="ver" id="v0.1.7">
+  <h2>0.1.7 <span class="date">2026-11-19</span> <span class="latest">최신</span></h2>
+  <p class="lead">기본 답변 모델의 정확도를 높이고, 문서에서 읽는 글을 넓힌 판입니다.</p>
+  <h3>바뀐 점</h3>
+  <ul>
+    <li><b>답변이 더 정확해짐(기본 모델)</b>: 기본 답변 모델 Qwen3-1.7B 에게 근거를 줄 때 가장 관련 높은 근거를 질문 바로 앞에 둡니다.
+      작은 모델은 질문 가까이 있는 글을 더 잘 쓰기 때문입니다. 시험 문서 질문 100개에서 정답이 46개 → 54개로 늘었습니다.
+      근거 번호는 그대로라 답 끝의 [1] 은 여전히 가장 관련 높은 근거입니다.
+      다른 답변 모델(Mi:dm · Qwen3.5-4B 등)은 시험해 보니 좋아지지 않아 예전 순서 그대로 둡니다.</li>
+    <li><b>문서의 본문 밖 글도 읽기</b>: PDF 글상자(숨긴 글상자 포함) · PDF 서식 칸에 적힌 값 · Word 메모 · PowerPoint · Word 의 SmartArt 글을 함께 읽어 검색에 넣습니다.
+      예전에는 이런 글이 빠져 찾을 수 없었습니다. 엑셀 셀 메모를 일부 파일에서 놓치던 문제도 고쳤습니다
+      (<a href="https://github.com/kobongsoo/Struct-DocParse-OCR-rust">struct_docparse</a> 0.2.0).</li>
+    <li><b>파일 속성에 버전 표시</b>: 탐색기 → 속성 → 자세히에서 MoAISearch.exe · simplerag-rs.exe 의 파일 버전 · 제품 이름 · 저작권이 보입니다.</li>
+  </ul>
+  <div class="notice">인덱스를 다시 만들 필요는 없습니다. 0.1.6 위에 그대로 덮어 설치하면 됩니다.<br>
+    이미 읽어 둔 문서는 그대로 남고, 본문 밖 글은 <b>새로 더하거나 바뀐 문서부터</b> 읽습니다. 답변 정확도 개선은 설치 직후 바로 적용됩니다.</div>
+  <p class="dl"><a href="https://github.com/kobongsoo/MoAI-S/releases/tag/v0.1.7">릴리스 v0.1.7</a> · <code>MoAISearch_Setup_0.1.7.exe</code></p>
+</section>
+
 <section class="ver" id="v0.1.6">
-  <h2>0.1.6 <span class="date">2026-11-17</span> <span class="latest">최신</span></h2>
+  <h2>0.1.6 <span class="date">2026-11-17</span></h2>
   <p class="lead">스캔 문서 읽기(OCR)를 더 정확하고 빠르게 고친 판입니다. 0.1.5 는 내부 시험판이라 공개하지 않았습니다.</p>
   <h3>바뀐 점</h3>
   <ul>
