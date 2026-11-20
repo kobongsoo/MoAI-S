@@ -8,8 +8,11 @@
   <a href="https://github.com/kobongsoo/MoAI-S/releases/latest"><b>⬇ 다운로드</b></a> ·
   <a href="https://kobongsoo.github.io/MoAI-S/">소개 사이트</a> ·
   <a href="https://kobongsoo.github.io/MoAI-S/manual.html">사용 설명서</a> ·
-  <a href="https://kobongsoo.github.io/MoAI-S/changelog.html">변경 기록</a>
+  <a href="https://kobongsoo.github.io/MoAI-S/changelog.html">변경 기록</a> ·
+  <a href="https://kobongsoo.github.io/MoAI-S/#video"><b>▶ 42초 소개 영상</b></a>
 </p>
+
+<p align="center"><a href="https://kobongsoo.github.io/MoAI-S/#video" title="42초 소개 영상 보기"><img src="docs/video/moai-s-shorts.jpg" width="240" alt="MoAI-S 42초 소개 영상 — 눌러서 보기"></a><br><sub>▶ 그림을 누르면 영상이 재생되는 페이지로 이동합니다 · <a href="https://github.com/kobongsoo/MoAI-S/raw/main/docs/video/moai-s-shorts.mp4">MP4 받기</a></sub></p>
 
 ![MoAI 탐색기](docs/img/main.jpg)
 
